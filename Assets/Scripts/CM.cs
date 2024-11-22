@@ -39,6 +39,13 @@ public class CM : MonoBehaviour
             lbW.motorTorque = motor * Time.timeScale;
             rbW.motorTorque = motor * Time.timeScale;
         }
+        else if (driveSpeed < 1)
+        {
+            lfW.motorTorque = motor * Time.timeScale;
+            rfW.motorTorque = motor * Time.timeScale;
+            lbW.motorTorque = motor * Time.timeScale;
+            rbW.motorTorque = motor * Time.timeScale;
+        }
         else
         {
             // Aplica brake torque (frenado)
@@ -49,7 +56,7 @@ public class CM : MonoBehaviour
             rbW.brakeTorque = brakeTorque;
         }
 
-        Debug.Log(rbW.motorTorque);
+        Debug.Log(driveSpeed);
     }
     
 
